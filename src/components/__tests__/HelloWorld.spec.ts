@@ -9,3 +9,5 @@
 // //     expect(wrapper.text()).toContain('Hello Vitest');
 // //   });
 // // });
+
+export {};
