@@ -3,7 +3,5 @@
 </script>
 
 <template>
-  <div class="bg-light h-screen dark:bg-dark">
-    <RouterView />
-  </div>
+  <RouterView />
 </template>

@@ -13,7 +13,7 @@
 
 <template>
   <button
-    class="hover:animate-pulse border-2 border-indigo-400 rounded-xl px-5 py-2 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300"
+    class="hover:animate-pulse border-2 border-indigo-400 rounded-xl px-5 py-2 bg-gradient-to-r from-light via-cyan-300 to-blue-300 dark:bg-gradient-to-r dark:from-cyan-800 dark:to-blue-800 text-primary dark:text-dark"
     @click="navigateToLink"
   >
     {{ props.text }}

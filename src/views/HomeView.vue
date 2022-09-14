@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <HomeHeader />
+  <div class="bg-light h-screen dark:bg-dark">
+    <HomeHeader />
+  </div>
 </template>
