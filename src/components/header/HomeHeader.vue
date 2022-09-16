@@ -38,14 +38,14 @@ function routeHome(): void {
         v-if="!isDarkModeState"
         src="../../assets/icons/light-mode.png"
         alt=""
-        class="h-2/6 hover:cursor-pointer hover:opacity-50 transition-all ease-out duration-700"
+        class="h-2/6 hover:cursor-pointer hover:opacity-50 animate__animated animate__fadeInUp"
         @click="toggleDarkMode"
       />
       <img
         v-else
         src="../../assets/icons/dark-mode.png"
         alt=""
-        class="h-2/6 hover:cursor-pointer hover:opacity-50 dark:invert transition-all ease-out duration-700"
+        class="h-2/6 hover:cursor-pointer hover:opacity-50 invert animate__animated animate__fadeInDown"
         @click="toggleDarkMode"
       />
       <a class="h-3/6 hover:opacity-50 transition-all ease-out duration-700" href="https://github.com/Danger-Duo/Hataraki_Frontend">

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-  import router from '@/router';
+import router from '@/router';
 
-  const props = defineProps({
-    link: { type: String, required: true },
-    text: { type: String, required: true },
-  });
+const props = defineProps({
+  link: { type: String, required: true },
+  text: { type: String, required: true },
+});
 
-  function navigateToLink(): void {
-    router.push(props.link);
-  }
+function navigateToLink(): void {
+  router.push(props.link);
+}
 </script>
 
 <template>
