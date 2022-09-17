@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         light: '#d9faff',
         dark: '#000a17',
+        input: 'd9d9d9',
       },
       textColor: {
         primary: '#00204a',
