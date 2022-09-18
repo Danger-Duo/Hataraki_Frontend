@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import HomeHeader from '../components/header/HomeHeader.vue';
-import HomeToLoginButton from '../components/button/HomeToLoginButton.vue';
+import ActionButton from '../components/button/ActionButton.vue';
+import router from '@/router';
+
+function goToLoginPage(): void {
+  router.push('/login');
+}
 </script>
 
 <template>
@@ -9,7 +14,7 @@ import HomeToLoginButton from '../components/button/HomeToLoginButton.vue';
   <div class="w-full p-8 md:p-24 flex flex-col justify-center items-center animate__animated animate__fadeInLeftBig">
     <span class="my-2 md:text-6xl text-3xl text-primary dark:text-dark font-bold">The Next Gen ATS.</span>
     <span class="my-2 md:text-3xl text-xl text-secondary dark:text-dark font-medium">Automate your next hire</span>
-    <HomeToLoginButton class="w-fit my-2" :link="'login'" :text="'Get Started Here'" />
+    <ActionButton class="w-fit my-2" :action="goToLoginPage">Get Started Here</ActionButton>
   </div>
 
   <div class="w-full p-8 lg:py-8 lg:px-[16%] flex flex-col">
@@ -20,7 +25,7 @@ import HomeToLoginButton from '../components/button/HomeToLoginButton.vue';
       <span class="my-2 text-xl text-secondary dark:text-dark font-normal"
         >Tired of sending emails for every application on LinkedIn? Craft a template or choose from our many carefully-curated templates and have them
         sent to your candidates with a single click. You may also do your own interview form for applications and have candidates apply through your
-        own customised link. Fill up the workflow and Hataraki will take care of the rest for you!</span
+        own customised link.</span
       >
     </div>
 
@@ -53,7 +58,7 @@ import HomeToLoginButton from '../components/button/HomeToLoginButton.vue';
       <span class="my-2 lg:text-3xl text-xl text-secondary dark:text-dark font-bold">No subscription, you pay what you need</span>
       <span class="my-2 text-xl text-secondary dark:text-dark font-normal"
         >You pay what you need and for the features that you want. In fact, Hataraki was designed to be free and usable for small teams, startups and
-        businesses. Enterprise solutions are available to customise your needs if you find that the base version of hataraki is not enough.
+        businesses. Enterprise solutions are available to customise your needs.
       </span>
     </div>
   </div>
