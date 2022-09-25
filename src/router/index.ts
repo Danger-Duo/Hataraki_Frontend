@@ -5,12 +5,12 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: () => import('@/views/HomeView.vue'),
       children: [
         {
-          path: '/',
-          name: 'content',
+          path: '',
+          name: 'Content',
           components: {
             content: () => import('@/components/home-content/HomeIntro.vue'),
           },
@@ -19,12 +19,33 @@ const router = createRouter({
     },
     {
       path: '/login',
-      name: 'login',
+      name: 'Login',
       component: () => import('@/views/LoginView.vue'),
     },
     {
+      path: '/app',
+      name: 'App',
+      component: () => import('@/views/MainAppView.vue'),
+      children: [
+        {
+          path: '',
+          name: 'Dashboard',
+          components: {
+            content: () => import('@/components/app-content/DashboardContent.vue'),
+          },
+        },
+        {
+          path: 'listings',
+          name: 'Listings',
+          components: {
+            content: () => import('@/components/app-content/ListingsContent.vue'),
+          },
+        },
+      ],
+    },
+    {
       path: '/:pathMatch(.*)*',
-      name: 'notFound',
+      name: 'NotFound',
       component: () => import('@/views/NotFound.vue'),
     },
   ],

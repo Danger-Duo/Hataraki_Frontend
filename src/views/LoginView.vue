@@ -6,6 +6,7 @@ import TextInput from '@/components/input/TextInput.vue';
 import PasswordInput from '@/components/input/PasswordInput.vue';
 import { type Ref, ref } from 'vue';
 import { validateEmail } from '@/util/validators';
+import router from '@/router';
 
 const isDarkMode: boolean = localStorage.getItem('isDarkMode') == 'true';
 const isLogin: Ref<boolean> = ref<boolean>(true);
@@ -23,6 +24,7 @@ const registerEmailErrorMsg: Ref<string> = ref<string>('');
 function loginUser(): void {
   console.log('Login Email: ', loginEmail.value);
   console.log('Login Password: ', loginPassword.value);
+  router.push('/app');
 }
 
 function registerUser(): void {
