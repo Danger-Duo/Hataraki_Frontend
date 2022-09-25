@@ -5,18 +5,27 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: () => import('../views/HomeView.vue'),
+      name: 'home',
+      component: () => import('@/views/HomeView.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'content',
+          components: {
+            content: () => import('@/components/home-content/HomeIntro.vue'),
+          },
+        },
+      ],
     },
     {
       path: '/login',
-      name: 'Login',
-      component: () => import('../views/LoginView.vue'),
+      name: 'login',
+      component: () => import('@/views/LoginView.vue'),
     },
     {
       path: '/:pathMatch(.*)*',
-      name: 'NotFound',
-      component: () => import('../views/NotFound.vue'),
+      name: 'notFound',
+      component: () => import('@/views/NotFound.vue'),
     },
   ],
 });

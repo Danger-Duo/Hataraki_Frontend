@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HatarakiSVGLogo from '../components/svg-icons/hataraki/HatarakiSVGLogo.vue';
-import HatarakiSVGLogoDark from '../components/svg-icons/hataraki/HatarakiSVGLogoDark.vue';
-import ActionButton from '../components/button/ActionButton.vue';
+import HatarakiSVGLogo from '@/components/svg-icons/hataraki/HatarakiSVGLogo.vue';
+import HatarakiSVGLogoDark from '@/components/svg-icons/hataraki/HatarakiSVGLogoDark.vue';
+import ActionButton from '@/components/button/ActionButton.vue';
+import TextInput from '@/components/input/TextInput.vue';
+import PasswordInput from '@/components/input/PasswordInput.vue';
 import { type Ref, ref } from 'vue';
-import TextInput from '../components/input/TextInput.vue';
-import PasswordInput from '../components/input/PasswordInput.vue';
 import { validateEmail } from '@/util/validators';
 
 const isDarkMode: boolean = localStorage.getItem('isDarkMode') == 'true';

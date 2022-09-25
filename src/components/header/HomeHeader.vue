@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import router from '@/router';
 import { ref, type Ref } from 'vue';
-import ActionButton from '../button/ActionButton.vue';
-import HatarakiSVGLogo from '../svg-icons/hataraki/HatarakiSVGLogo.vue';
-import HatarakiSVGLogoDark from '../svg-icons/hataraki/HatarakiSVGLogoDark.vue';
-import HatarakiSVGIcon from '../svg-icons/hataraki/HatarakiSVGIcon.vue';
-import HatarakiSVGIconDark from '../svg-icons/hataraki/HatarakiSVGIconDark.vue';
+import ActionButton from '@/components/button/ActionButton.vue';
+import HatarakiSVGLogo from '@/components/svg-icons/hataraki/HatarakiSVGLogo.vue';
+import HatarakiSVGLogoDark from '@/components/svg-icons/hataraki/HatarakiSVGLogoDark.vue';
+import HatarakiSVGIcon from '@/components/svg-icons/hataraki/HatarakiSVGIcon.vue';
+import HatarakiSVGIconDark from '@/components/svg-icons/hataraki/HatarakiSVGIconDark.vue';
 
 const isDarkMode: boolean = localStorage.getItem('isDarkMode') == 'true';
 const isDarkModeState: Ref<boolean> = ref<boolean>(isDarkMode);
