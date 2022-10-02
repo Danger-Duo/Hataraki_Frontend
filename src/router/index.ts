@@ -48,6 +48,13 @@ const router = createRouter({
             content: () => import('@/components/app-content/SettingsContent.vue'),
           },
         },
+        {
+          path: 'schedule',
+          name: 'Schedule',
+          components: {
+            content: () => import('@/components/app-content/ScheduleContent.vue'),
+          },
+        },
       ],
     },
     {

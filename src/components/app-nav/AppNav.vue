@@ -18,6 +18,10 @@ import AppNavLink from './AppNavLink.vue';
     <img src="@/assets/icons/listings-button-icon-png.png" class="dark:invert h-8" alt="" />
     <span class="dark:text-dark">My Listings</span>
   </AppNavLink>
+  <AppNavLink link="/app/schedule">
+    <img src="@/assets/icons/schedule-button-icon-png.png" class="dark:invert h-8" alt="" />
+    <span class="dark:text-dark">Schedule</span>
+  </AppNavLink>
   <AppNavLink link="/app/settings">
     <img src="@/assets/icons/settings-button-icon-png.png" class="dark:invert h-8" alt="" />
     <span class="dark:text-dark">Settings</span>
