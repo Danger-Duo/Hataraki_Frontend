@@ -3,11 +3,13 @@ import AppNav from '@/components/app-nav/AppNav.vue';
 </script>
 
 <template>
-  <div class="w-full h-full flex flex-row">
-    <div class="w-1/5">
+  <div class="w-full h-full flex md:flex-row flex-col">
+    <div
+      class="overflow-auto w-full md:w-1/5 md:h-screen flex flex-row md:flex-col items-center bg-light divide-x md:divide-y divide-dashed divide-light-secondary"
+    >
       <AppNav />
     </div>
-    <div class="w-4/5">
+    <div class="md:w-4/5">
       <router-view name="content" />
     </div>
   </div>
