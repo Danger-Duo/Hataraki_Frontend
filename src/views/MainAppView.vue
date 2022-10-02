@@ -3,8 +3,12 @@ import AppNav from '@/components/app-nav/AppNav.vue';
 </script>
 
 <template>
-  <div class="">
-    <AppNav />
-    <router-view name="content" />
+  <div class="w-full h-full flex flex-row">
+    <div class="w-1/5">
+      <AppNav />
+    </div>
+    <div class="w-4/5">
+      <router-view name="content" />
+    </div>
   </div>
 </template>

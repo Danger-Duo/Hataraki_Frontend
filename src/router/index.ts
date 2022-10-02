@@ -41,6 +41,13 @@ const router = createRouter({
             content: () => import('@/components/app-content/ListingsContent.vue'),
           },
         },
+        {
+          path: 'settings',
+          name: 'Settings',
+          components: {
+            content: () => import('@/components/app-content/SettingsContent.vue'),
+          },
+        },
       ],
     },
     {

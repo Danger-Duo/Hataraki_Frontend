@@ -10,7 +10,8 @@ module.exports = {
     extend: {
       colors: {
         light: '#d9faff',
-        dark: '#000a17',
+        'light-secondary': '#B9DDE5',
+        dark: '#001127',
         input: 'd9d9d9',
       },
       textColor: {

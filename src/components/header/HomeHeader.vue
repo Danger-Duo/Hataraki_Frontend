@@ -40,14 +40,14 @@ function goToLoginPage(): void {
     <div class="h-full flex flex-row gap-4 items-center mx-8">
       <img
         v-if="!isDarkModeState"
-        src="../../assets/icons/light-mode.png"
+        src="@/assets/icons/light-mode.png"
         alt=""
         class="h-3/6 hover:cursor-pointer hover:opacity-50 animate__animated animate__fadeInUp"
         @click="toggleDarkMode"
       />
       <img
         v-else
-        src="../../assets/icons/dark-mode.png"
+        src="@/assets/icons/dark-mode.png"
         alt=""
         class="h-3/6 hover:cursor-pointer hover:opacity-50 invert animate__animated animate__fadeInDown"
         @click="toggleDarkMode"
@@ -56,7 +56,7 @@ function goToLoginPage(): void {
         class="h-3/6 w-auto hover:opacity-50 transition-all ease-out duration-700 aspect-square"
         href="https://github.com/Danger-Duo/Hataraki_Frontend"
       >
-        <img src="../../assets/icons/github-mark.png" alt="" class="h-full w-full dark:invert" />
+        <img src="@/assets/icons/github-mark.png" alt="" class="h-full w-full dark:invert" />
       </a>
       <ActionButton :action="goToLoginPage">Log In</ActionButton>
     </div>
