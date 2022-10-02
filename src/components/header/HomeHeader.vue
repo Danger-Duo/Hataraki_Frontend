@@ -3,9 +3,7 @@ import router from '@/router';
 import { ref, type Ref } from 'vue';
 import ActionButton from '@/components/button/ActionButton.vue';
 import HatarakiSVGLogo from '@/components/svg-icons/hataraki/HatarakiSVGLogo.vue';
-import HatarakiSVGLogoDark from '@/components/svg-icons/hataraki/HatarakiSVGLogoDark.vue';
 import HatarakiSVGIcon from '@/components/svg-icons/hataraki/HatarakiSVGIcon.vue';
-import HatarakiSVGIconDark from '@/components/svg-icons/hataraki/HatarakiSVGIconDark.vue';
 
 const isDarkMode: boolean = localStorage.getItem('isDarkMode') == 'true';
 const isDarkModeState: Ref<boolean> = ref<boolean>(isDarkMode);
@@ -33,10 +31,8 @@ function goToLoginPage(): void {
 
 <template>
   <div class="w-full h-24 p-2 flex flex-row justify-between">
-    <HatarakiSVGIcon v-if="!isDarkModeState" class="sm:hidden block h-full w-fit cursor-pointer" @click="routeHome" />
-    <HatarakiSVGIconDark v-else class="sm:hidden block h-full cursor-pointer w-fit" @click="routeHome" />
-    <HatarakiSVGLogo v-if="!isDarkModeState" class="hidden sm:block h-full w-fit cursor-pointer" @click="routeHome" />
-    <HatarakiSVGLogoDark v-else class="hidden sm:block h-full cursor-pointe w-fit" @click="routeHome" />
+    <HatarakiSVGIcon class="sm:hidden block h-full w-fit cursor-pointer dark:invert" @click="routeHome" />
+    <HatarakiSVGLogo class="hidden sm:block h-full w-fit cursor-pointer dark:invert" @click="routeHome" />
     <div class="h-full flex flex-row gap-4 items-center mx-8">
       <img
         v-if="!isDarkModeState"
