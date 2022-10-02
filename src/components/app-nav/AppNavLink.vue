@@ -2,6 +2,7 @@
 const props = defineProps({
   link: { type: String, required: true },
 });
+console.log(import.meta.env.VITE_DEV_BACKEND_URL);
 </script>
 
 <template>
