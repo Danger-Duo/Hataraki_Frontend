@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import router from '@/router';
 import { ref, type Ref } from 'vue';
-import ActionButton from '../button/ActionButton.vue';
-import HatarakiSVGLogo from '../svg-icons/hataraki/HatarakiSVGLogo.vue';
-import HatarakiSVGLogoDark from '../svg-icons/hataraki/HatarakiSVGLogoDark.vue';
-import HatarakiSVGIcon from '../svg-icons/hataraki/HatarakiSVGIcon.vue';
-import HatarakiSVGIconDark from '../svg-icons/hataraki/HatarakiSVGIconDark.vue';
+import ActionButton from '@/components/button/ActionButton.vue';
+import HatarakiSVGLogo from '@/components/svg-icons/hataraki/HatarakiSVGLogo.vue';
+import HatarakiSVGIcon from '@/components/svg-icons/hataraki/HatarakiSVGIcon.vue';
 
 const isDarkMode: boolean = localStorage.getItem('isDarkMode') == 'true';
 const isDarkModeState: Ref<boolean> = ref<boolean>(isDarkMode);
@@ -33,21 +31,19 @@ function goToLoginPage(): void {
 
 <template>
   <div class="w-full h-24 p-2 flex flex-row justify-between">
-    <HatarakiSVGIcon v-if="!isDarkModeState" class="sm:hidden block h-full w-fit cursor-pointer" @click="routeHome" />
-    <HatarakiSVGIconDark v-else class="sm:hidden block h-full cursor-pointer w-fit" @click="routeHome" />
-    <HatarakiSVGLogo v-if="!isDarkModeState" class="hidden sm:block h-full w-fit cursor-pointer" @click="routeHome" />
-    <HatarakiSVGLogoDark v-else class="hidden sm:block h-full cursor-pointe w-fit" @click="routeHome" />
+    <HatarakiSVGIcon class="sm:hidden block h-full w-fit cursor-pointer dark:invert" @click="routeHome" />
+    <HatarakiSVGLogo class="hidden sm:block h-full w-fit cursor-pointer dark:invert" @click="routeHome" />
     <div class="h-full flex flex-row gap-4 items-center mx-8">
       <img
         v-if="!isDarkModeState"
-        src="../../assets/icons/light-mode.png"
+        src="@/assets/icons/light-mode.png"
         alt=""
         class="h-3/6 hover:cursor-pointer hover:opacity-50 animate__animated animate__fadeInUp"
         @click="toggleDarkMode"
       />
       <img
         v-else
-        src="../../assets/icons/dark-mode.png"
+        src="@/assets/icons/dark-mode.png"
         alt=""
         class="h-3/6 hover:cursor-pointer hover:opacity-50 invert animate__animated animate__fadeInDown"
         @click="toggleDarkMode"
@@ -56,7 +52,7 @@ function goToLoginPage(): void {
         class="h-3/6 w-auto hover:opacity-50 transition-all ease-out duration-700 aspect-square"
         href="https://github.com/Danger-Duo/Hataraki_Frontend"
       >
-        <img src="../../assets/icons/github-mark.png" alt="" class="h-full w-full dark:invert" />
+        <img src="@/assets/icons/github-mark.png" alt="" class="h-full w-full dark:invert" />
       </a>
       <ActionButton :action="goToLoginPage">Log In</ActionButton>
     </div>
