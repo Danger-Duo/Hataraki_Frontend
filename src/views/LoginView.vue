@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import HatarakiSVGLogo from '../components/svg-icons/hataraki/HatarakiSVGLogo.vue';
-import HatarakiSVGLogoDark from '../components/svg-icons/hataraki/HatarakiSVGLogoDark.vue';
-import ActionButton from '../components/button/ActionButton.vue';
+import HatarakiSVGLogo from '@/components/svg-icons/hataraki/HatarakiSVGLogo.vue';
+import ActionButton from '@/components/button/ActionButton.vue';
+import TextInput from '@/components/input/TextInput.vue';
+import PasswordInput from '@/components/input/PasswordInput.vue';
 import { type Ref, ref } from 'vue';
-import TextInput from '../components/input/TextInput.vue';
-import PasswordInput from '../components/input/PasswordInput.vue';
 import { validateEmail } from '@/util/validators';
+import router from '@/router';
 
-const isDarkMode: boolean = localStorage.getItem('isDarkMode') == 'true';
 const isLogin: Ref<boolean> = ref<boolean>(true);
 
 const loginEmail: Ref<string> = ref<string>('');
@@ -23,6 +22,7 @@ const registerEmailErrorMsg: Ref<string> = ref<string>('');
 function loginUser(): void {
   console.log('Login Email: ', loginEmail.value);
   console.log('Login Password: ', loginPassword.value);
+  router.push('/app');
 }
 
 function registerUser(): void {
@@ -54,8 +54,7 @@ function toggleLoginRegister(): void {
 <template>
   <div class="w-full min-h-screen flex items-center justify-center">
     <div v-if="isLogin" class="flex flex-col justify-center">
-      <HatarakiSVGLogo v-if="!isDarkMode" class="h-auto w-[300px] m-5" />
-      <HatarakiSVGLogoDark v-else class="h-auto w-[300px] m-5" />
+      <HatarakiSVGLogo class="h-auto w-[300px] m-5 dark:invert" />
       <TextInput v-model.trim="loginEmail" label-for="loginEmail">Email Address</TextInput>
       <PasswordInput v-model="loginPassword" label-for="loginPassword">Password</PasswordInput>
       <div class="my-4 w-full">
@@ -66,8 +65,7 @@ function toggleLoginRegister(): void {
       </div>
     </div>
     <div v-else class="flex flex-col justify-center">
-      <HatarakiSVGLogo v-if="!isDarkMode" class="h-auto w-[300px] m-5" />
-      <HatarakiSVGLogoDark v-else class="h-auto w-[300px] m-5" />
+      <HatarakiSVGLogo class="h-auto w-[300px] m-5 dark:invert" />
       <TextInput v-model.trim="registerEmail" label-for="registerEmail" :error-msg="registerEmailErrorMsg">Email Address</TextInput>
       <PasswordInput v-model="registerPassword" label-for="registerPassword">Password</PasswordInput>
       <PasswordInput v-model="registerConfirmPassword" label-for="registerConfirmPassword" :error-msg="confirmPasswordErrorMsg"
