@@ -37,9 +37,22 @@ const router = createRouter({
         {
           path: 'listings',
           name: 'Listings',
-          components: {
-            content: () => import('@/components/app-content/ListingsContent.vue'),
-          },
+          children: [
+            {
+              path: '',
+              name: 'Listings',
+              components: {
+                content: () => import('@/components/app-content/ListingsContent.vue'),
+              },
+            },
+            {
+              path: 'create',
+              name: 'Create Listings',
+              components: {
+                content: () => import('@/components/listings/CreateListingContent.vue'),
+              },
+            },
+          ],
         },
         {
           path: 'settings',

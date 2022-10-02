@@ -5,7 +5,7 @@
       <span class="dark:text-dark font-medium text-lg">To get you started:</span>
       <div class="flex sm:flex-row flex-col w-full items-center md:items-start">
         <router-link
-          to="/app/listing/create"
+          to="/app/listings/create"
           class="dark:text-dark flex flex-col items-center justify-center cursor-pointer rounded border-black dark:border-white border-dashed border-4 p-4 hover:opacity-50 m-2 md:m-4 w-[250px]"
         >
           <img alt="" src="@/assets/icons/listings-button-icon-png.png" class="dark:invert" />
